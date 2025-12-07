@@ -1,43 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LowCodeBoy Studio</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: #fafafa;
-      text-align: center;
-      padding: 80px 20px;
-      color: #333;
-    }
-    h1 { font-size: 28px; margin-bottom: 10px; }
-    h2 { font-size: 20px; margin-top: 40px; }
-    a {
-      color: #007AFF;
-      text-decoration: none;
-      display: block;
-      margin: 6px 0;
-      font-weight: 500;
-    }
-    a:hover { text-decoration: underline; }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LowCodeBoy Studio</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #007AFF;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --text-secondary: #666;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        header {
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        /* Grid Layout for Apps */
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        /* App Card Style */
+        .app-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .app-icon-placeholder {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
+            border-radius: 18px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #999;
+        }
+
+        /* Metaphor Highlight Style */
+        .metaphor-card {
+            border: 2px solid rgba(52, 152, 219, 0.2);
+        }
+
+        .metaphor-icon {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+        }
+
+        .app-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        .app-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 25px;
+            min-height: 48px;
+        }
+
+        .link-group {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        a.button-link {
+            display: block;
+            padding: 10px 0;
+            text-decoration: none;
+            color: var(--accent-color);
+            background-color: rgba(0, 122, 255, 0.05);
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.2s;
+            font-size: 0.9rem;
+        }
+
+        a.button-link:hover {
+            background-color: rgba(0, 122, 255, 0.1);
+            text-decoration: none;
+        }
+
+        footer {
+            margin-top: 60px;
+            font-size: 14px;
+            color: #999;
+            border-top: 1px solid #eaeaea;
+            padding-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .app-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
-  <h1>LowCodeBoy Studio</h1>
-  <p>Official website for LowCodeBoy apps and projects.</p>
 
-  <h2>CardOmi</h2>
-  <a href="https://lowcodeboy-cmd.github.io/cardomi-privacy/">Privacy Policy</a>
-  <a href="https://lowcodeboy-cmd.github.io/cardomi-support//">Support</a>
+    <div class="container">
+        <header>
+            <h1>LowCodeBoy Studio</h1>
+            <p class="subtitle">Creating simple, meaningful digital experiences.</p>
+        </header>
 
-  <h2>UrgeTrack</h2>
-  <a href="https://lowcodeboy-cmd.github.io/urgetrack-privacy/">Privacy Policy</a>
-  <a href="https://lowcodeboy-cmd.github.io/urgetrack-support/">Support</a>
+        <div class="app-grid">
 
-  <footer style="margin-top:60px; font-size:14px; color:#888;">
-    © 2025 LowCodeBoy Studio
-  </footer>
+            <div class="app-card metaphor-card">
+                <div class="app-icon-placeholder metaphor-icon">🔮</div>
+                <h2 class="app-title">Metaphor Tarot</h2>
+                <p class="app-desc">Soul Guidance & Deep Analysis.<br>Translate the metaphors of destiny.</p>
+                <div class="link-group">
+                    <a href="https://lowcodeboy-cmd.github.io/metaphor-privacy/" class="button-link">Privacy Policy</a>
+                    <a href="https://lowcodeboy-cmd.github.io/metaphor-terms/" class="button-link">Terms of Service</a>
+                    <a href="https://lowcodeboy-cmd.github.io/metaphor-support/" class="button-link">Support</a>
+                </div>
+            </div>
+
+            <div class="app-card">
+                <div class="app-icon-placeholder">🃏</div>
+                <h2 class="app-title">CardOmi</h2>
+                <p class="app-desc">Your daily card companion.<br>Simple and intuitive.</p>
+                <div class="link-group">
+                    <a href="https://lowcodeboy-cmd.github.io/cardomi-privacy/" class="button-link">Privacy Policy</a>
+                    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" class="button-link">Terms of Service (EULA)</a>
+                    <a href="https://lowcodeboy-cmd.github.io/cardomi-support/" class="button-link">Support</a>
+                </div>
+            </div>
+
+            <div class="app-card">
+                <div class="app-icon-placeholder">📊</div>
+                <h2 class="app-title">UrgeTrack</h2>
+                <p class="app-desc">Track your habits and urges.<br>Regain control of your life.</p>
+                <div class="link-group">
+                    <a href="https://lowcodeboy-cmd.github.io/urgetrack-privacy/" class="button-link">Privacy Policy</a>
+                    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" class="button-link">Terms of Service (EULA)</a>
+                    <a href="https://lowcodeboy-cmd.github.io/urgetrack-support/" class="button-link">Support</a>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>&copy; 2025 LowCodeBoy Studio. All rights reserved.</p>
+            <p><a href="mailto:lowcodeboy@gmail.com" style="color:#999; text-decoration:none; font-size:0.9em;">lowcodeboy@gmail.com</a></p>
+        </footer>
+    </div>
+
 </body>
 </html>
